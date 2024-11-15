@@ -87,7 +87,7 @@ module Selenium
         !!exit_code
       rescue Errno::ECHILD, Errno::ESRCH
         WebDriver.logger.debug("  -> process: #{@pid} already finished", id: :process)
-        return true
+        true
       end
 
       def poll_for_exit(timeout)
